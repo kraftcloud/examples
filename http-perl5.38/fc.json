@@ -1,0 +1,33 @@
+{
+  "boot-source": {
+    "kernel_image_path": "../../catalog/library/base/.unikraft/build/base_fc-x86_64",
+    "boot_args": "kernel netdev.ipv4_addr=172.44.0.2 netdev.ipv4_gw_addr=172.44.0.1 netdev.ipv4_subnet_mask=255.255.255.0 vfs.fstab=[ \"initrd:/:initrd:::\" ] -- /usr/local/bin/perl /http_server.pl",
+    "initrd_path": "rootfs.cpio"
+  },
+  "drives": [],
+  "machine-config": {
+    "vcpu_count": 1,
+    "mem_size_mib": 512,
+    "smt": false,
+    "track_dirty_pages": false
+  },
+  "cpu-config": null,
+  "balloon": null,
+  "network-interfaces": [
+    {
+      "iface_id": "net1",
+      "guest_mac":  "06:00:ac:10:00:02",
+      "host_dev_name": "tap0"
+    }
+  ],
+  "vsock": null,
+  "logger": {
+    "log_path": "/tmp/firecracker.log",
+    "level": "Debug",
+    "show_level": true,
+    "show_log_origin": true
+  },
+  "metrics": null,
+  "mmds-config": null,
+  "entropy": null
+}
