@@ -1,0 +1,9 @@
+spec: v0.6
+
+name: node-prisma
+
+runtime: index.unikraft.io/official/node:latest
+
+rootfs: ./Dockerfile
+
+cmd: ["/usr/local/bin/node", "/rest-express/src/index.js"]
