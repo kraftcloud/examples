@@ -1,0 +1,12 @@
+services:
+
+  python:
+    build: .
+    ports:
+      - 443:8080
+    domainname: python
+    mem_reservation: 512
+
+  mariadb:
+    image: mariadb:latest
+    mem_reservation: 1024
