@@ -1,0 +1,17 @@
+networks:
+  tyk-network:
+
+services:
+
+  tyk:
+    build: .
+    ports:
+      - 443:8080
+    networks:
+      - tyk-network
+
+  redis:
+    image: redis:latest
+    domainname: tyk-redis
+    networks:
+      - tyk-network
